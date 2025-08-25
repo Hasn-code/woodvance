@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woodvance General Contracting</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+     body { font-family: Arial, sans-serif; }
+    .hero {
+      background: url('p1.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 240px 50px;
+    }
+    .btn1{
+      border-radius: 25px;
+      color: white;
+      background-color: white;
+    }
+    .hmg{
+      margin-top: -120px;
+      margin-bottom: 100px;
+    }
+#expertise{
+   background: #f5f5f5;
+}
+    .expert{
+display: flex;
+   justify-content: space-between;
+   align-items: center; 
+   flex-direction: row;
+   flex-wrap: wrap;
+ padding-top: 30px;
+ padding-bottom: 20px;
+ background: #f5f5f5;
+    }
+.txt{
+  margin-top: 13px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+    .hero h1 { font-size: 3rem; font-weight: bold; }
+    .service-card { transition: 0.3s; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0px 5px 15px rgba(0,0,0,0.2); }
+    footer { background: #222; color: #bbb; padding: 30px 0; }
+    footer a { color: #fff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+#reviews{
+   background: #eceff1;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.nom{
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+}
+#services{
+ background: #f5f5f5;
+}
+    .work-section {
+  background: #212529;
+      color: white;
+      padding: 60px 25px;
+      text-align: center;
+    }
+
+    .work-section h2 {
+      font-size: 28px;
+      margin-bottom: 35px;
+     
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .work-item {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: center;
+      color: #333;
+      max-width: 1000px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      position: relative;
+    }
+
+    .work-item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Video */
+    .work-item video {
+      width: 100%;
+       aspect-ratio: 1/1;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Play button overlay */
+    .play-button::after {
+  
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      color: rgba(255,255,255,0.9);
+      pointer-events: none;
+    }
+
+    .work-item h3 {
+      margin: 15px 0 10px;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 8px 30px;
+      background: #ccc;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background 0.3s;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .btn:hover {
+      background:#212529;
+      color: white;
+    }
+
+    /* Responsive Fixes */
+    .work-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* default = 1 per row (mobile) */
+  gap: 20px;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr); /* medium screens = 2 per row */
+  }
+}
+
+@media (min-width: 1200px) {
+  .work-grid {
+    grid-template-columns: repeat(4, 1fr); /* big screens = 3 per row */
+  }
+}
+
+    @media (max-width: 600px) {
+      .work-section h2 {
+        font-size: 22px;
+      }
+      .work-item video {
+        height: 160px;
+      }
+    }
+@media (max-width: 992px) {
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .work-grid {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+}
+    
+    .about-section {
+   background: #f5f5f5;
+      padding: 50px 20px;
+      text-align: center;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .about-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .about-logo img {
+      width: 150px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .about-text {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .about-subsection {
+      margin-top: 30px;
+      text-align: left;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-subsection h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .about-subsection p {
+      margin: 0 0 15px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* Values list */
+    .values-list {
+      list-style: none;
+      padding: 0;
+    }
+    .values-list li {
+      margin-bottom: 8px;
+    }
+
+    /* Footer Banner */
+    .about-footer {
+      margin-top: 40px;
+      background: #3b3330;
+      color: #fff;
+      padding: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Responsive Fix */
+    @media (max-width: 768px) {
+      .about-section h2 {
+        font-size: 22px;
+      }
+      .about-text {
+        font-size: 14px;
+      }
+      .about-subsection h3 {
+        font-size: 18px;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="#">Woodvance General Contracting</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+   <img class="hmg" src="p4-removebg-preview.png"/>
+  <div class="container">
+   
+    <h1>Woodvance General Contracting</h1>
+    <p class="lead">Reliable contracting services for homes and businesses</p>
+    <a href="#services" class="btn btn1  btn-md mt-2"><b>Explore Services</b></a>
+  </div>
+</section>
+<!-- expetise txt -->
+<section id="expertise" class="py-5">
+<div class="container expert">
+     <div class="col-lg-4"><img src="p3.jpg" width="100%" /></div>       
+   <div class="col-lg-6 txt"><h2 class="text-center">Our Expertise</h2><br/><p>At Woodvance, our expertise spans civil, MEP, finishing, aluminum & glass, painting, flooring, and joinery works. We deliver reliable, high-quality solutions for both residential and commercial projects, tailored to your needs.At Woodvance, we pride ourselves on our extensive experience in the contracting industry. Our skilled team specializes in both residential and commercial projects, ensuring high-quality results that meet your needs.</p></div>
+</div>
+</section>
+
+<!-- Our Expertise -->
+<section id="services" class="py-5">
+<!--<div class="container">-->
+   
+ 
+
+      <!--<div class="row g-4">
+      <div class="col-md-3"><div class="card service-card h-100"><div class="card-body text-center"><h5>Gypsum Work</h5></div></div></div>
+      <div class="col-md-3"><div class="card service-card h-100"><div class="card-body text-center"><h5>Civil Work</h5></div></div></div>
+      <div class="col-md-3"><div class="card service-card h-100"><div class="card-body text-center"><h5>Finishing Work</h5></div></div></div>
+      <div class="col-md-3"><div class="card service-card h-100"><div class="card-body text-center"><h5>MEP Work</h5></div></div></div>
+      <div class="col-md-3"><div class="card service-card h-100"><div class="card-body text-center"><h5>Steel & Iron Work</h5></div></div></div>
+      <div class="col-md-3"><div class="card service-card h-100"><div class="card-body text-center"><h5>Electrical Work</h5></div></div></div>
+      <div class="col-md-3"><div class="card service-card h-100"><div class="card-body text-center"><h5>Aluminium & Glass</h5></div></div></div>
+      <div class="col-md-3"><div class="card service-card h-100"><div class="card-body text-center"><h5>Parking Shades</h5></div></div></div>
+      <div class="col-md-3"><div class="card service-card h-100"><div class="card-body text-center"><h5>Waterproofing</h5></div></div></div>
+      <div class="col-md-3"><div class="card service-card h-100"><div class="card-body text-center"><h5>Kitchen Cabinets</h5></div></div></div>
+    </div>-->
+    <section class="work-section">
+      <h2>Our Work Our Quality</h2>
+  
+      <div class="work-grid">
+        <div class="work-item play-button">
+          <video src="v1.mp4" controls autoplay muted loop playsinline></video>
+          <h3>Gypsum Work</h3>
+          <a href="#" class="btn">See More</a>
+        </div>
+  
+        <div class="work-item play-button">
+          <video src="v2.mp4" controls autoplay muted loop playsinline></video>
+          <h3>Civil Work</h3>
+          <a href="#" class="btn">See More</a>
+        </div>
+  
+        <div class="work-item play-button">
+          <video src="v3.mp4" controls autoplay muted loop playsinline></video>
+          <h3>Finishing Work</h3>
+          <a href="#" class="btn">See More</a>
+        </div>
+  
+        <div class="work-item play-button">
+          <video src="v4.mp4" controls autoplay muted loop playsinline></video>
+          <h3>Solar Work</h3>
+          <a href="#" class="btn">See More</a>
+        </div>
+  
+        <div class="work-item play-button">
+          <video src="v5.mp4" controls autoplay muted loop playsinline></video>
+          <h3>Metal Work</h3>
+          <a href="#" class="btn">See More</a>
+        </div>
+  
+        <div class="work-item play-button">
+          <video src="v6.mp4" controls autoplay muted loop playsinline></video>
+          <h3>Electrical Work</h3>
+          <a href="#" class="btn">See More</a>
+        </div>
+         <div class="work-item play-button">
+          <video src="v7.mp4" controls autoplay muted loop playsinline></video>
+          <h3>Kitchen and Wardrobes Work</h3>
+          <a href="#" class="btn">See More</a>
+        </div>
+         <div class="work-item play-button">
+          <video src="v8.mp4" controls autoplay muted loop playsinline></video>
+          <h3>waterproofing Work</h3>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+    </section>
+  <!--</div>-->
+</section>
+
+<!-- About Us -->
+<!--<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">About Us</h2>
+    <p class="text-center">At <strong>Woodvance</strong>, we pride ourselves on our extensive experience in the contracting industry. Our skilled team specializes in both residential and commercial projects, ensuring high-quality results that meet your needs.</p>
+  </div>
+</section>-->
+<section class="about-section">
+  <h2>About Us</h2>
+  <div class="about-logo">
+    <img src="p4-removebg-preview.png" alt="Company Logo">
+  </div>
+  <div class="about-text">
+    <p>
+      At Woodvance General Contracting, we believe that strong foundations create lasting value. As a trusted name in general contracting and maintenance services, we deliver reliable, high-quality solutions for both residential and commercial projects. From small-scale maintenance to large construction works, our team is committed to excellence, precision, and customer satisfaction.
+    </p>
+    <p>
+      With expertise spanning civil works, electrical, plumbing, HVAC, carpentry, gypsum works, painting, parking shades, and more, Woodvance has positioned itself as a one-stop solution provider. Our goal is not just to fix or build, but to create safe, functional, and sustainable spaces that stand the test of time.
+    </p>
+  </div>
+
+  <!-- Mission -->
+  <div class="about-subsection">
+    <h3>Our Mission–</h3>
+    <p>
+      To provide professional contracting and maintenance services that combine quality workmanship, innovative solutions, and customer-focused care at competitive prices.
+    </p>
+  </div>
+
+  <!-- Vision -->
+  <div class="about-subsection">
+    <h3>Our Vision–</h3>
+    <p>
+      To be recognized as a leading general contracting company in the region, known for reliability, efficiency, and exceptional service.
+    </p>
+  </div>
+
+  <!-- Values -->
+  <div class="about-subsection">
+    <h3>Our Values–</h3>
+    <ul class="values-list">
+      <li><b>Quality:</b> Delivering work that lasts</li>
+      <li><b>Integrity:</b> Honest and transparent services</li>
+      <li><b>Safety:</b> Prioritizing safe practices in every project</li>
+      <li><b>Customer First:</b> Building long-term relationships through trust</li>
+    </ul>
+  </div>
+
+</section>
+<!-- Client Reviews -->
+<section id="reviews" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Client Reviews</h2>
+    <div class="row g-4">
+      <div class="col-md-4  "><div class="card p-3 h-100 bg-light"><img  src="p5.jpeg" alt="Danyal Azeem" class="rounded-circle mb-4 d-block mx-auto" width="140px"/><p class="nom">- Danyal Azeem</p><p>"The quality of work was excellent and everything has been running smoothly since. I would definitely recommend their services."</p></div></div>
+      <div class="col-md-4"><div class="card p-3 h-100 bg-light"><img src="p7.jpeg" alt="Danyal Azeem" class="rounded-circle mb-4 d-block mx-auto" width="140px"/><p class="nom">- Kaushal</p><p>"Technicians arrived on time, carried out the work with attention to detail, and ensured everything was functioning properly."</p><br/></div></div>
+      <div class="col-md-4"><div class="card p-3 h-100 bg-light"><img src="p8.jpeg" alt="Danyal Azeem" class="rounded-circle mb-4 d-block mx-auto" width="140px"/><p class="nom">- Ahmad Bin Sarwar</p><p>"Very satisfied with the maintenance service. Work was completed on time and with excellent quality."</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Get in Touch</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Contact Information</h5>
+        <p>📍 Mussafah M7, Abu Dhabi, UAE<br>📍 Dubai, UAE<br>📍 Sharjah, UAE</p>
+        <p>📞 +971 50 190 8864<br>✉ Amjad@woodvance.com<br>✉ Info@woodvance.com</p>
+      </div>
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3"><input type="text" class="form-control" placeholder="Your Name"></div>
+          <div class="mb-3"><input type="email" class="form-control" placeholder="Your Email"></div>
+          <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Your Message"></textarea></div>
+          <button class="btn btn-dark w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <p>© 2025 Woodvance General Contracting. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
