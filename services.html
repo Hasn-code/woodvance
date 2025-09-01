@@ -25,7 +25,32 @@
       font-size: 45px;
       font-weight: bolder;
     }
-    .navbar{
+
+     .navbar-nav .nav-link {
+  position: relative;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color:  brown	; /* change text color on hover */
+}
+
+/* Optional: underline effect on hover */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white; /* underline color */
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}.navbar{
       background-color: #494545;
     }
   .text-center{
@@ -34,16 +59,47 @@
     margin-bottom: 50px;
   }
     /* Cards */
-    .service-card {
-      background:lightgray;
-      border-radius: 12px;
-      text-align: center;
+   .service-card {
+  position: relative;
+  overflow: hidden;
+
+  transition: transform 0.3s ease;
       padding: 2rem;
-      color: #000000;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+     
       transition: transform 0.3s ease;
       height: 100%;
-    }
+}
+
+.service-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.1); /* zoom on hover */
+}
+
+.service-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 18px;
+  text-align: center;
+  
+}
+
+.service-card .overlay h3 {
+  margin: 50;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
 .small-img {
     width: 75%;           /* smaller width on desktop */
     max-width: 300px;     /* hard limit so they don’t get huge */
@@ -334,18 +390,64 @@ spotlight integration.</li></ul>
 
 
   <div class="row g-4">
-
-    <div class="col-md-6 col-lg-4"><div class="service-card"><h3>Gypsum Board Work</h3><p>High-quality gypsum and false ceiling works for stylish and durable interiors.</p></div></div>
-    <div class="col-md-6 col-lg-4"><div class="service-card"><h3>Aluminum & Glass Work</h3><p>Premium aluminum and glass solutions with modern design & durability.</p></div></div>
-    <div class="col-md-6 col-lg-4"><div class="service-card"><h3>Wall Painting Work</h3><p>Professional painting services to transform your spaces with style & quality.</p></div></div>
-    <div class="col-md-6 col-lg-4"><div class="service-card"><h3>Floor & Ceiling Work</h3><p>Durable flooring and stylish ceiling solutions for homes & offices.</p></div></div>
-    <div class="col-md-6 col-lg-4"><div class="service-card"><h3>Kitchen Cabinets & Wardrobes</h3><p>Custom-designed storage solutions with durability & elegance.</p></div></div>
-    <div class="col-md-6 col-lg-4"><div class="service-card"><h3>MEP Works</h3><p>Reliable Mechanical, Electrical & Plumbing services for projects.</p></div></div>
-    <div class="col-md-6 col-lg-4"><div class="service-card"><h3>Parking Shades</h3><p>High-quality parking shades that protect your vehicles from sun and weather, with durable structures and elegant designs for homes and businesses.</p></div></div>
-    <div class="col-md-6 col-lg-4"><div class="service-card"><h3>Civil Work</h3><p>From foundations to finishing, our team ensures strong structures and lasting results for residential, commercial, and industrial projects.</p></div></div>
-    <div class="col-md-6 col-lg-4"><div class="service-card"><h3>Steel Structure</h3><p>We specialize in steel structure works for warehouses, factories, and commercial buildings.</p></div></div>
-
-
+ <div class="col-md-6 col-lg-4">
+      <div class="service-card">
+        <img src="p30.jpg" alt="Gypsum Board Work">
+        <div class="overlay"><h3>Kitchen
+Cabinets and
+Wardrobes</h3></div>
+      </div>
+    </div>
+ <div class="col-md-6 col-lg-4">
+      <div class="service-card">
+        <img src="p40.jpg" alt="Gypsum Board Work">
+        <div class="overlay"><h3>Gypsum Board Work</h3></div>
+      </div>
+    </div>
+     <div class="col-md-6 col-lg-4">
+      <div class="service-card">
+        <img src="p31.jpg" alt="Gypsum Board Work">
+        <div class="overlay"><h3>Wallpaper and Curtain Work 
+</h3></div>
+      </div>
+    </div>
+     <div class="col-md-6 col-lg-4">
+      <div class="service-card">
+        <img src="p32.jpg" alt="Gypsum Board Work">
+        <div class="overlay"><h3>Civil Work</h3></div>
+      </div>
+    </div>
+     <div class="col-md-6 col-lg-4">
+      <div class="service-card">
+        <img src="p33.jpg" alt="Gypsum Board Work">
+        <div class="overlay"><h3>Car Parking and
+Shades</h3></div>
+      </div>
+    </div>
+     <div class="col-md-6 col-lg-4">
+      <div class="service-card">
+        <img src="p34.jpg" alt="Gypsum Board Work">
+        <div class="overlay"><h3>Steel Structure</h3></div>
+      </div>
+    </div>
+ <div class="col-md-6 col-lg-4">
+      <div class="service-card">
+        <img src="p35.png" alt="Gypsum Board Work">
+        <div class="overlay"><h3>Electric Work / MEP</h3></div>
+      </div>
+    </div>
+     <div class="col-md-6 col-lg-4">
+      <div class="service-card">
+        <img src="p39.jpg" alt="Gypsum Board Work">
+        <div class="overlay"><h3>Plumbing Work</h3></div>
+      </div>
+    </div>
+      <div class="col-md-6 col-lg-4">
+      <div class="service-card">
+        <img src="p41.jpg" alt="Paint Work">
+        <div class="overlay"><h3>Paint Work</h3></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -365,6 +467,7 @@ spotlight integration.</li></ul>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
