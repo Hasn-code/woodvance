@@ -274,7 +274,24 @@ display: flex;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
+.whatsapp-float {
+  position: fixed;
+  width: 52px;
+  height: 52px;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
     /* Responsive Fix */
     @media (max-width: 768px) {
       .about-section h2 {
@@ -291,6 +308,9 @@ display: flex;
 footer { background:#494545; color: #fff; padding: 2rem 0; text-align: center; margin-top: 0; }
   </style>
 </head>
+  <a href="https://wa.me/971501908864" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
 <body>
 
 <!-- Navbar -->
@@ -476,5 +496,6 @@ footer { background:#494545; color: #fff; padding: 2rem 0; text-align: center; m
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
