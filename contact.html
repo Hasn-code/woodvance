@@ -65,6 +65,24 @@ iframe {
       height: 250px;
       border: none;
     }
+    .whatsapp-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+
     /* Wrapper for contact section */
     .contact-wrapper {
       position: relative;
@@ -105,7 +123,10 @@ footer { background: #212529; color: #fff; padding: 2rem 0; text-align: center; 
 
   </style>
 </head>
-<body>
+<a href="https://wa.me/971501908864" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+  <body>
 
 <!-- Navbar (same as your code) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -189,6 +210,7 @@ footer { background: #212529; color: #fff; padding: 2rem 0; text-align: center; 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
 
