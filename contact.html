@@ -5,124 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Woodvance General Contracting</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
-    body {
+    body, html {
+      height: 100%;
+      margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff;
-      color: #222;
-      line-height: 1.7;
-    }
-.navbar{
-      background-color: #494545;
-    }
-    .page-header {    
-      text-align: center;
-      margin-top: 60px;
-      margin-bottom: -10px;
-      background-image: url('p21.jpg'); /* change image */
-      padding: 200px 50px;
-      background-size: cover;
-      background-position: center;
-      color: black;
-      font-size: 45px;
-      font-weight: bolder;
     }
 
-   .contact-section, .careers-section {
-      padding: 4rem 0;
+    /* Full-page background */
+    .contact-bg {
+      background: url("cbg.jpg") center/cover no-repeat;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+     .navbar-nav .nav-link {
+  position: relative;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color:  brown	; /* change text color on hover */
+}
+
+/* Optional: underline effect on hover */
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white; /* underline color */
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+    /* Dark overlay for readability */
+    .contact-bg::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
     }
 
-    .contact-info h5, .careers-section h5 {
+    /* Contact form box */
+    .contact-form {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .contact-form h2 {
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    .form-control, .btn {
-      border-radius: 8px;
+    .contact-form button {
+      border-radius: 25px;
+      font-weight: bold;
     }
-    .cin{
-        margin-top: 20px;
-        margin-bottom: 20px;
-        border-radius: 10px;
-        background-color: lightgray;
-    }
-.ctf{
-    margin-bottom: 20px;
-}
-.cs{
-    background-color: lightgray;
-    justify-content: center;
-    border-radius: 20px;
-}
-footer { background: #494545; color: #fff; padding: 2rem 0; text-align: center; margin-top: 2rem; }
-    
+
+footer { background: #212529; color: #fff; padding: 2rem 0; text-align: center; margin-top: 2rem; }
+
   </style>
 </head>
 <body>
 
-<!-- ✅ Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+<!-- Navbar (same as your code) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">Woodvance General Contracting</a>
+    <a class="navbar-brand fw-bold" href="#">Woodvance General Contracting</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#reviews">Reviews</a></li>
-         <li class="nav-item"><a class="nav-link" href="#career">Careers</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html#reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="#career">Careers</a></li>
         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Page Header -->
-<div class="page-header">
-  <p>CONTACT US</p>
-</div>
-
-<!-- Contact Section -->
-<section class="contact-section container">
-  <div class="row g-5 cin">
-    <!-- Contact Info -->
-    <div class="col-md-5 contact-info ">
-      <h5>Get in Touch</h5>
-      <p><strong>Woodvance General Contracting</strong></p>
-      <p><i class="bi bi-geo-alt"></i> Mussafah M7, Abu Dhabi | Dubai | Sharjah</p>
-      <p><i class="bi bi-telephone"></i> +971 50 190 8864</p>
-      <p><i class="bi bi-envelope"></i> Amjad@woodvance.com | info@woodvance.com</p>
-
-      <h5 class="mt-4">Working Hours</h5>
-      <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
-      <p>Sunday: Closed</p>
-    </div>
-
-    <!-- Contact Form -->
-    <div class="col-md-7 ">
-      <h5>Send Us a Message</h5>
-      <form class="ctf">
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Your Name" required>
-        </div>
-        <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Your Email" required>
-        </div>
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Subject">
-        </div>
-        <div class="mb-3">
-          <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-dark px-4">Send Message</button>
-      </form>
-    </div>
+<!-- Contact Section with Background -->
+<section class="contact-bg">
+  <div class="contact-form">
+    <h2>Get in Touch</h2>
+    <form>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Subject">
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button class="btn btn-dark w-100">Send Message</button>
+    </form>
   </div>
-<!-- Careers Section -->
-
+</section>
+<!-- Career Section -->
 <section id="career" class="careers-section container my-5">
   <div class="row justify-content-center">
     <div class="col-md-8 text-center p-4 bg-light rounded shadow-sm">
@@ -134,20 +140,7 @@ footer { background: #494545; color: #fff; padding: 2rem 0; text-align: center; 
     </div>
   </div>
 </section>
-
-
-  <!-- Google Map -->
-  <div class="row mt-5">
-     <h2 class="fw-bold mb-3 text-center">Find Us</h2>
-      <hr class="w-25 mx-auto mb-4">
-    <div class="col-12">
-      <iframe src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_CODE" 
-              width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- ✅ Footer -->
+<!-- Footer (same as your code) -->
 <footer>
   <p><strong>Woodvance General Contracting</strong></p>
   <p>Mussafah M7, ABU DHABI | Dubai | Sharjah</p>
@@ -155,6 +148,7 @@ footer { background: #494545; color: #fff; padding: 2rem 0; text-align: center; 
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </body>
 </html>
+
+
