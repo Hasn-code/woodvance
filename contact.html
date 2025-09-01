@@ -50,30 +50,42 @@
 }
 
     /* Dark overlay for readability */
-    .contact-bg::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 1;
+.contact-bg {
+      background: url("cbg.jpg") center/cover no-repeat;
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 80px 20px;
     }
-
-    /* Contact form box */
-    .contact-form {
+iframe {
+      border-radius: 10px;
+      width: 100%;
+      height: 250px;
+      border: none;
+    }
+    /* Wrapper for contact section */
+    .contact-wrapper {
       position: relative;
-      z-index: 2;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 40px;
+      background: rgba(255, 255, 255, 0.8);
       border-radius: 15px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      overflow: hidden;
+      max-width: 1100px;
       width: 100%;
-      max-width: 500px;
+    }
+ .contact-form{
+    margin-bottom: 20px;
+ }
+    .contact-form, .contact-details {
+      padding: 40px;
     }
 
-    .contact-form h2 {
+    .contact-form h2, .contact-details h2 {
       font-weight: bold;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
       margin-bottom: 20px;
-      text-align: center;
     }
 
     .contact-form button {
@@ -81,6 +93,14 @@
       font-weight: bold;
     }
 
+  @media (max-width: 768px) {
+      .contact-wrapper {
+        border-radius: 10px;
+      }
+      .contact-form, .contact-details {
+        padding: 25px;
+      }
+    }
 footer { background: #212529; color: #fff; padding: 2rem 0; text-align: center; margin-top: 2rem; }
 
   </style>
@@ -109,23 +129,42 @@ footer { background: #212529; color: #fff; padding: 2rem 0; text-align: center; 
 
 <!-- Contact Section with Background -->
 <section class="contact-bg">
-  <div class="contact-form">
-    <h2>Get in Touch</h2>
-    <form>
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Your Name" required>
+  <div class="container">
+    <div class="row g-0 contact-wrapper">
+      
+      <!-- Left: Contact Form -->
+      <div class="col-md-6 contact-form">
+        <h2>Get in Touch</h2>
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Subject">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button class="btn btn-dark w-100">Send Message</button>
+        </form>
       </div>
-      <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Your Email" required>
+
+      <!-- Right: Details + Map -->
+      <div class="col-md-6 contact-details bg-light">
+        <h2>Contact Details</h2>
+        <p><strong>Address:</strong> Mussafah M7, ABU DHABI, United Arab Emirates</p>
+        <p><strong>Email:</strong> info@woodvance.com / Amjad@woodvance.com</p>
+        <p><strong>Phone:</strong> +971 50 123 4567</p>
+
+        <!-- Google Map -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.1640368648013!2d54.51080647594136!3d24.37559636448676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e41284c5a92e5%3A0xffbf3809c4dc35ce!2sMusaffah%20-%20M7%20-%20Abu%20Dhabi!5e0!3m2!1sen!2sae!4v1756721739594!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
       </div>
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Subject">
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-      </div>
-      <button class="btn btn-dark w-100">Send Message</button>
-    </form>
+
+    </div>
   </div>
 </section>
 <!-- Career Section -->
@@ -150,5 +189,6 @@ footer { background: #212529; color: #fff; padding: 2rem 0; text-align: center; 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
 
