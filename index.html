@@ -1,521 +1,550 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Woodvance General Contracting</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-     body { font-family: Arial, sans-serif; }
-    .hero {
-      background: url('p25.jpg') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 240px 50px;
-    }
-    .btn1{
-      border-radius: 25px;
-      color: white;
-      background-color: white;
-    }
-    .hmg{
-      margin-top: -120px;
-      margin-bottom: 100px;
-    }
-    .navbar{
-      background-color: #494545;
-    }
-     .navbar-nav .nav-link {
-  position: relative;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color:  brown	; /* change text color on hover */
-}
-
-/* Optional: underline effect on hover */
-.navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: white; /* underline color */
-  transition: width 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover::after {
-  width: 100%;
-}
-#expertise{
-   background: #f5f5f5;
-}
-    .expert{
-display: flex;
-   justify-content: space-between;
-   align-items: center; 
-   flex-direction: row;
-   flex-wrap: wrap;
- padding-top: 30px;
- padding-bottom: 20px;
- background: #f5f5f5;
-    }
-.txt{
-  margin-top: 13px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-    .hero h1 { font-size: 3rem; font-weight: bold; }
-    .service-card { transition: 0.3s; }
-    .service-card:hover { transform: translateY(-5px); box-shadow: 0px 5px 15px rgba(0,0,0,0.2); }
-    footer { background: #494545; color: #bbb; padding: 30px 0; }
-    footer a { color: #fff; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-#reviews{
-   background: #eceff1;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-}
-.nom{
-  font-size: medium;
-  font-weight: bold;
-  text-align: center;
-}
-#services{
- background: #f5f5f5;
-}
-     .work-section {
-  background: white;
-      color: black;
-      padding: 60px 25px;
-      text-align: center;
-    }
-
-    .work-section h2 {
-      font-size: 28px;
-      margin-bottom: 35px;
-     
-    }
-
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      justify-items: center;
-    }
-
-    .work-item {
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      color: #494545;
-      max-width: 1000px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-      position: relative;
-    }
-
-    .work-item:hover {
-      transform: translateY(-5px);
-    }
-
-    /* Video */
-    .work-item video {
-      width: 150%;
-      height: 300px;
-       aspect-ratio: 1/1;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Play button overlay */
-    .play-button::after {
-  
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 40px;
-      color: rgba(255,255,255,0.9);
-      pointer-events: none;
-    }
-
-    .work-item h3 {
-      margin: 15px 0 10px;
-      font-size: 18px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-bottom: 15px;
-      padding: 8px 30px;
-      background: #ccc;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: bold;
-      transition: background 0.3s;
-      text-decoration: none;
-      color: #000;
-    }
-
-    .btn:hover {
-      background:#212529;
-      color: white;
-    }
-
-    /* Responsive Fixes */
-    .work-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr); /* default = 1 per row (mobile) */
-  gap: 20px;
-  justify-items: center;
-}
-
-@media (min-width: 768px) {
-  .work-grid {
-    grid-template-columns: repeat(2, 1fr); /* medium screens = 2 per row */
-  }
-}
-
-@media (min-width: 1200px) {
-  .work-grid {
-    grid-template-columns: repeat(4, 1fr); /* big screens = 3 per row */
-  }
-}
-
-    @media (max-width: 600px) {
-      .work-section h2 {
-        font-size: 22px;
-      }
-      .work-item video {
-        height: 160px;
-      }
-    }
-@media (max-width: 992px) {
-  .work-grid {
-    grid-template-columns: repeat(3, 1fr); /* 2 per row on tablets */
-  }
-}
-
-@media (max-width: 600px) {
-  .work-grid {
-    grid-template-columns: 1fr; /* 1 per row on mobile */
-  }
-}
-    
-    .about-section {
-   background: #f5f5f5;
-      padding: 50px 20px;
-      text-align: center;
-      font-family:Georgia, 'Times New Roman', Times, serif;
-    }
-
-    .about-section h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #111;
-    }
-
-    .about-logo img {
-      width: 150px;
-      margin: 20px auto;
-      display: block;
-    }
-
-    .about-text {
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 16px;
-      line-height: 1.7;
-      text-align: justify;
-    }
-
-    .about-subsection {
-      margin-top: 30px;
-      text-align: left;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .about-subsection h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-      color: #222;
-    }
-
-    .about-subsection p {
-      margin: 0 0 15px;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    /* Values list */
-    .values-list {
-      list-style: none;
-      padding: 0;
-    }
-    .values-list li {
-      margin-bottom: 8px;
-    }
-
-    /* Footer Banner */
-    .about-footer {
-      margin-top: 40px;
-      background: #3b3330;
-      color: #fff;
-      padding: 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-.whatsapp-float {
-  position: fixed;
-  width: 52px;
-  height: 52px;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  z-index: 999;
-}
-.whatsapp-float img {
-  width: 32px;
-  height: 32px;
-}
-    /* Responsive Fix */
-    @media (max-width: 768px) {
-      .about-section h2 {
-        font-size: 22px;
-      }
-      .about-text {
-        font-size: 14px;
-      }
-      .about-subsection h3 {
-        font-size: 18px;
-      }
-    }
-
-footer { background:#494545; color: #fff; padding: 2rem 0; text-align: center; margin-top: 0; }
-  </style>
-</head>
-  <a href="https://wa.me/971501908864" class="whatsapp-float" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-</a>
-<body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container">
-
-    <a class="navbar-brand fw-bold" href="#">Woodvance General Contracting</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link active" href="#reviews">Reviews</a></li>
-           <li class="nav-item"><a class="nav-link active" href="contact.html">Careers</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero" id="home">
-   <img class="hmg" src="p4-removebg-preview.png" alt="	Woodvance General Contracting logo"/>
-  <div class="container">
-   
-    <h1>Woodvance General Contracting</h1>
-    <p class="lead">  Woodvance General Contracting provides civil works, MEP,
-      gypsum ceilings, interior finishing, painting, flooring,
-      aluminum and glass works, and property maintenance across
-      Abu Dhabi, Dubai and Sharjah.</p>
-    <a href="#services" class="btn btn1  btn-md mt-2"><b>Explore Our Contracting Services</b></a>
-  </div>
-</section>
-<!-- expetise txt -->
-<section id="expertise" class="py-5">
-<div class="container expert">
-     <div class="col-lg-4"><img src="p3.jpg" width="100%" /></div>       
-   <div class="col-lg-6 txt"><h2 class="text-center">Our Contracting & Building Maintenance Expertise</h2><br/><p> Woodvance General Contracting delivers residential and
-        commercial contracting solutions across Abu Dhabi, Dubai
-        and Sharjah. Our services include civil construction,
-        MEP works, gypsum ceiling installation, interior finishing,
-        aluminum and glass works, painting, flooring, joinery,
-        kitchen works and waterproofing. We focus on quality
-        workmanship, practical solutions and reliable project
-        delivery tailored to each property's requirements.</p></div>
-</div>
-</section>
-
-<!-- Our Expertise -->
-<section id="services" class="py-5">
-
-    <section class="work-section">
-      <h2>Our Work Our Quality</h2>
-  
-      <div class="work-grid">
-        <div class="work-item play-button">
-          <video src="v1.mp4" controls autoplay muted loop playsinline></video>
-          <h3>	Gypsum Ceiling & Partition Installation</h3>
-          <a href="services.html" class="btn">See More</a>
-        </div>
-  
-        <div class="work-item play-button">
-          <video src="v2.mp4" controls autoplay muted loop playsinline></video>
-          <h3>Civil Construction & Contracting</h3>
-          <a href="services.html" class="btn">See More</a>
-        </div>
-  
-        <div class="work-item play-button">
-          <video src="v3.mp4" controls autoplay muted loop playsinline></video>
-          <h3>	Interior Finishing & Fit-Out Works</h3>
-          <a href="services.html" class="btn">See More</a>
-        </div>
-  
-        <div class="work-item play-button">
-          <video src="v4.mp4" controls autoplay muted loop playsinline></video>
-          <h3>	Solar Installation Works</h3>
-          <a href="services.html" class="btn">See More</a>
-        </div>
-  
-        <div class="work-item play-button">
-          <video src="v5.mp4" controls autoplay muted loop playsinline></video>
-          <h3>Metal Fabrication & Installation</h3>
-          <a href="services.html" class="btn">See More</a>
-        </div>
-  
-        <div class="work-item play-button">
-          <video src="v6.mp4" controls autoplay muted loop playsinline></video>
-          <h3>	Electrical Installation & Maintenance</h3>
-          <a href="services.html" class="btn">See More</a>
-        </div>
-         <div class="work-item play-button">
-          <video src="v7.mp4" controls autoplay muted loop playsinline></video>
-          <h3>	Kitchen Installation & Joinery</h3>
-          <a href="services.html" class="btn">See More</a>
-        </div>
-         <div class="work-item play-button">
-          <video src="v8.mp4" controls autoplay muted loop playsinline></video>
-          <h3>	Waterproofing & Leak Prevention</h3>
-          <a href="services.html" class="btn">See More</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Woodvance General Contracting delivers civil works, MEP, gypsum, interior finishing, painting, flooring and property maintenance across Abu Dhabi, Dubai and Sharjah." />
+    <meta name="theme-color" content="#171a18" />
+    <title>Woodvance General Contracting | Building Better Spaces</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>General Contracting · Building Maintenance · Renovation</span>
+        <div>
+          <a href="tel:+971501908864">+971 50 190 8864</a
+          ><span class="top-divider">|</span
+          ><span>Abu Dhabi · Dubai · Sharjah</span>
         </div>
       </div>
-    </section>
-  <!--</div>-->
-</section>
-
-<!-- About Us -->
-<section class="about-section">
-  <h2>About Woodvance General Contracting</h2>
-  <div class="about-logo">
-    <img src="p4-removebg-preview.png" alt="Company Logo">
-  </div>
-  <div class="about-text">
-    <p>
-        Woodvance General Contracting provides general contracting,
-    building maintenance and renovation services for residential
-    and commercial properties in Abu Dhabi, Dubai and Sharjah.
-    Our team undertakes civil works, property maintenance and
-    interior improvement projects with a focus on quality
-    workmanship, safety and customer satisfaction.
-    </p>
-    <p>
- Our expertise includes electrical and plumbing works,
-    HVAC services, gypsum ceilings and partitions, painting,
-    flooring, carpentry, kitchen installation, aluminum and
-    glass works, parking shades and waterproofing. We aim to
-    provide practical contracting solutions that help clients
-    maintain, improve and develop their properties.    </p>
-  </div>
-
-  <!-- Mission -->
-  <div class="about-subsection">
-    <h3>Our Mission–</h3>
-    <p>
-      To provide professional contracting and maintenance services that combine quality workmanship, innovative solutions, and customer-focused care at competitive prices.
-    </p>
-  </div>
-
-  <!-- Vision -->
-  <div class="about-subsection">
-    <h3>Our Vision–</h3>
-    <p>
-      To be recognized as a leading general contracting company in the region, known for reliability, efficiency, and exceptional service.
-    </p>
-  </div>
-
-  <!-- Values -->
-  <div class="about-subsection">
-    <h3>Our Values–</h3>
-    <ul class="values-list">
-      <li><b>Quality:</b> Delivering work that lasts</li>
-      <li><b>Integrity:</b> Honest and transparent services</li>
-      <li><b>Safety:</b> Prioritizing safe practices in every project</li>
-      <li><b>Customer First:</b> Building long-term relationships through trust</li>
-    </ul>
-  </div>
-
-</section>
-<!-- Client Reviews -->
-<section id="reviews" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Client Reviews</h2>
-    <div class="row g-4">
-      <div class="col-md-4  "><div class="card p-3 h-100 bg-light"><img  src="p5.jpeg" alt="Danyal Azeem" class="rounded-circle mb-4 d-block mx-auto" width="140px"/><p class="nom">- Danyal Azeem</p><p>"The quality of work was excellent and everything has been running smoothly since. I would definitely recommend their services."</p></div></div>
-      <div class="col-md-4"><div class="card p-3 h-100 bg-light"><img src="p7.jpeg" alt="Danyal Azeem" class="rounded-circle mb-4 d-block mx-auto" width="140px"/><p class="nom">- Kaushal</p><p>"Technicians arrived on time, carried out the work with attention to detail, and ensured everything was functioning properly."</p><br/></div></div>
-      <div class="col-md-4"><div class="card p-3 h-100 bg-light"><img src="p8.jpeg" alt="Danyal Azeem" class="rounded-circle mb-4 d-block mx-auto" width="140px"/><p class="nom">- Ahmad Bin Sarwar</p><p>"Very satisfied with the maintenance service. Work was completed on time and with excellent quality."</p></div></div>
     </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">Get in Touch</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <h5>Contact Information</h5>
-        <p>📍 Mussafah M7, Abu Dhabi, UAE<br>📍 Dubai, UAE<br>📍 Sharjah, UAE</p>
-        <p>📞 +971 50 190 8864<br>✉ Amjad@woodvance.com<br>✉ Info@woodvance.com</p>
+    <header class="header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Woodvance home"
+          ><span class="brand-mark">W<span>.</span></span
+          ><span class="brand-name"
+            >WOODVANCE<small>GENERAL CONTRACTING</small></span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          aria-label="Open navigation"
+          aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" aria-label="Main navigation">
+          <a class="active" href="index.html">Home</a
+          ><a href="about.html">About</a><a href="services.html">Services</a
+          ><a href="#work">Our Work</a><a href="#reviews">Reviews</a
+          ><a class="nav-cta" href="contact.html">Get a Quote <span>↗</span></a>
+        </nav>
       </div>
-      <div class="col-md-6">
-        <form>
-          <div class="mb-3"><input type="text" class="form-control" placeholder="Your Name"></div>
-          <div class="mb-3"><input type="email" class="form-control" placeholder="Your Email"></div>
-          <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Your Message"></textarea></div>
-          <button class="btn btn-dark w-100">Send Message</button>
-        </form>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-image"></div>
+        <div class="hero-shade"></div>
+        <div class="container hero-content">
+          <div class="eyebrow light">
+            <span></span> BUILT ON QUALITY. DRIVEN BY TRUST.
+          </div>
+          <h1>Building better<br /><em>spaces</em> for life.</h1>
+          <p>
+            From essential maintenance to complete fit-outs, we bring thoughtful
+            solutions and dependable workmanship to every space.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="contact.html"
+              >Discuss Your Project <span>↗</span></a
+            ><a class="text-link light-link" href="services.html"
+              >Explore our services <span>→</span></a
+            >
+          </div>
+          <div class="hero-note">
+            <span class="note-line"></span
+            ><span
+              >Residential & commercial solutions<br /><strong
+                >Across the UAE</strong
+              ></span
+            >
+          </div>
+        </div>
+        <div class="hero-index">01 <span></span> 03</div>
+      </section>
+
+      <section class="intro section-pad">
+        <div class="container intro-grid">
+          <div>
+            <div class="eyebrow"><span></span> WHO WE ARE</div>
+            <h2>Spaces that work.<br /><em>Crafted to last.</em></h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              Woodvance General Contracting provides reliable construction,
+              renovation and property maintenance solutions for residential and
+              commercial spaces.
+            </p>
+            <p>
+              We combine skilled workmanship, practical thinking and attention
+              to detail to help every project move forward with confidence.
+            </p>
+            <a class="text-link" href="about.html"
+              >Get to know Woodvance <span>↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="services section-pad" id="services">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow"><span></span> WHAT WE DO</div>
+              <h2>Complete solutions.<br /><em>One trusted team.</em></h2>
+            </div>
+            <p>
+              From the first fix to the finishing touches, our services are
+              designed to keep your property performing at its best.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-photo photo-gypsum"></div>
+              <div class="service-info">
+                <span>01 / INTERIORS</span>
+                <h3>Gypsum Ceilings<br />& Partitions</h3>
+                <p>
+                  Clean, functional ceiling and partition solutions for modern
+                  spaces.
+                </p>
+                <a
+                  href="contact.html"
+                  aria-label="Enquire about gypsum ceilings"
+                  >↗</a
+                >
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="service-photo photo-civil"></div>
+              <div class="service-info">
+                <span>02 / CONSTRUCTION</span>
+                <h3>Civil Works<br />& Contracting</h3>
+                <p>
+                  Practical construction and civil solutions delivered with
+                  care.
+                </p>
+                <a href="contact.html" aria-label="Enquire about civil works"
+                  >↗</a
+                >
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="service-photo photo-fitout"></div>
+              <div class="service-info">
+                <span>03 / FINISHING</span>
+                <h3>Interior Finishing<br />& Fit-Out</h3>
+                <p>
+                  Thoughtful finishes that bring comfort, function and style
+                  together.
+                </p>
+                <a
+                  href="contact.html"
+                  aria-label="Enquire about interior fit-out"
+                  >↗</a
+                >
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="service-photo photo-metal"></div>
+              <div class="service-info">
+                <span>04 / METALWORK</span>
+                <h3>Aluminium, Glass<br />& Metal Works</h3>
+                <p>
+                  Durable installations and custom metal fabrication solutions.
+                </p>
+                <a href="contact.html" aria-label="Enquire about metal works"
+                  >↗</a
+                >
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="service-photo photo-mep"></div>
+              <div class="service-info">
+                <span>05 / MEP</span>
+                <h3>Electrical & MEP<br />Maintenance</h3>
+                <p>
+                  Essential building systems supported by dependable service.
+                </p>
+                <a href="contact.html" aria-label="Enquire about MEP">↗</a>
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="service-photo photo-kitchen"></div>
+              <div class="service-info">
+                <span>06 / JOINERY</span>
+                <h3>Kitchens &<br />Joinery</h3>
+                <p>
+                  Functional kitchen installations, cabinetry and tailored
+                  joinery.
+                </p>
+                <a
+                  href="contact.html"
+                  aria-label="Enquire about kitchens and joinery"
+                  >↗</a
+                >
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="service-photo photo-paint"></div>
+              <div class="service-info">
+                <span>07 / FINISHES</span>
+                <h3>Painting &<br />Flooring</h3>
+                <p>Fresh finishes that renew and enhance your property.</p>
+                <a
+                  href="contact.html"
+                  aria-label="Enquire about painting and flooring"
+                  >↗</a
+                >
+              </div>
+            </article>
+            <article class="service-card">
+              <div class="service-photo photo-water"></div>
+              <div class="service-info">
+                <span>08 / PROTECTION</span>
+                <h3>Waterproofing &<br />Property Care</h3>
+                <p>
+                  Preventive solutions to help protect your building over time.
+                </p>
+                <a href="contact.html" aria-label="Enquire about waterproofing"
+                  >↗</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section-pad" id="about">
+        <div class="container about-grid">
+          <div class="about-visual">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85"
+              alt="Modern completed interior with refined finishes"
+              loading="lazy" />
+            <div class="image-caption">
+              <span>WOODVANCE</span
+              ><strong>Thoughtful work.<br />Lasting value.</strong>
+            </div>
+          </div>
+          <div class="about-content">
+            <div class="eyebrow"><span></span> THE WOODVANCE APPROACH</div>
+            <h2>Good work is<br />built on <em>good values.</em></h2>
+            <p>
+              We believe every property deserves care, every detail matters and
+              every client deserves a team they can rely on. Our approach is
+              straightforward: understand the need, plan the work and deliver
+              with quality in mind.
+            </p>
+            <div class="value-list">
+              <div>
+                <b>01</b
+                ><span
+                  ><strong>Quality workmanship</strong
+                  ><small
+                    >Careful execution and attention to detail.</small
+                  ></span
+                >
+              </div>
+              <div>
+                <b>02</b
+                ><span
+                  ><strong>Honest communication</strong
+                  ><small>Clear coordination from start to finish.</small></span
+                >
+              </div>
+              <div>
+                <b>03</b
+                ><span
+                  ><strong>Client-first thinking</strong
+                  ><small
+                    >Solutions shaped around your requirements.</small
+                  ></span
+                >
+              </div>
+            </div>
+            <a class="btn btn-dark" href="contact.html"
+              >Work With Us <span>↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="work section-pad" id="work">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow"><span></span> OUR CAPABILITIES</div>
+              <h2>Made with care.<br /><em>Finished with purpose.</em></h2>
+            </div>
+            <p>
+              Explore the range of spaces and improvements our contracting and
+              maintenance team can help bring to life.
+            </p>
+          </div>
+          <div class="work-grid">
+            <div class="work-large">
+              <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1300&q=85"
+                alt="Contemporary interior finishing"
+                loading="lazy" />
+              <div class="work-label">
+                <span>INTERIOR FINISHING</span
+                ><strong>Details make the difference.</strong>
+              </div>
+            </div>
+            <div class="work-small">
+              <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85"
+                alt="Modern living space"
+                loading="lazy" />
+              <div class="work-label">
+                <span>RENOVATION & FIT-OUT</span
+                ><strong>Spaces, reimagined.</strong>
+              </div>
+            </div>
+          </div>
+          <p class="work-disclaimer">
+            Project imagery shown for design inspiration. Contact us to discuss
+            our services and project requirements.
+          </p>
+        </div>
+      </section>
+
+      <section class="process section-pad">
+        <div class="container">
+          <div class="eyebrow light"><span></span> HOW WE WORK</div>
+          <div class="section-heading light-heading">
+            <h2>A clear process.<br /><em>A better experience.</em></h2>
+            <p>
+              Good results start with understanding what matters to you. We keep
+              the process practical, organised and focused.
+            </p>
+          </div>
+          <div class="process-grid">
+            <div>
+              <b>01</b>
+              <h3>Let's talk</h3>
+              <p>Tell us about your property, requirements and goals.</p>
+            </div>
+            <div>
+              <b>02</b>
+              <h3>Plan the work</h3>
+              <p>We discuss the scope and the right way forward.</p>
+            </div>
+            <div>
+              <b>03</b>
+              <h3>Deliver with care</h3>
+              <p>Our team focuses on quality, coordination and detail.</p>
+            </div>
+            <div>
+              <b>04</b>
+              <h3>Stay connected</h3>
+              <p>We value clear communication and lasting relationships.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section-pad" id="reviews">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow"><span></span> KIND WORDS</div>
+              <h2>Built on trust.<br /><em>Backed by people.</em></h2>
+            </div>
+            <p>
+              We appreciate the clients who take the time to share their
+              experience with Woodvance.
+            </p>
+          </div>
+          <div class="review-grid">
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <blockquote>
+                “The quality of work was excellent and everything has been
+                running smoothly since. I would definitely recommend their
+                services.”
+              </blockquote>
+              <div class="review-person">
+                <span>DA</span><strong>Danyal Azeem</strong>
+              </div>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <blockquote>
+                “Technicians arrived on time, carried out the work with
+                attention to detail, and ensured everything was functioning
+                properly.”
+              </blockquote>
+              <div class="review-person">
+                <span>K</span><strong>Kaushal</strong>
+              </div>
+            </article>
+            <article class="review-card">
+              <div class="stars">★★★★★</div>
+              <blockquote>
+                “Very satisfied with the maintenance service. Work was completed
+                on time and with excellent quality.”
+              </blockquote>
+              <div class="review-person">
+                <span>AS</span><strong>Ahmad Bin Sarwar</strong>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="container cta-inner">
+          <div>
+            <div class="eyebrow light">
+              <span></span> HAVE A PROJECT IN MIND?
+            </div>
+            <h2>Let's make your space<br /><em>work better.</em></h2>
+          </div>
+          <a class="btn btn-gold" href="contact.html"
+            >Start a Conversation <span>↗</span></a
+          >
+        </div>
+      </section>
+
+      <section class="contact section-pad" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <div class="eyebrow"><span></span> GET IN TOUCH</div>
+            <h2>Tell us what<br />you <em>have in mind.</em></h2>
+            <p>
+              Looking for a reliable contracting or maintenance team? Get in
+              touch and tell us a little about your project.
+            </p>
+            <div class="contact-details">
+              <a href="tel:+971501908864"
+                ><small>CALL US</small>+971 50 190 8864</a
+              ><a href="mailto:info@woodvance.com"
+                ><small>EMAIL US</small>info@woodvance.com</a
+              >
+              <div>
+                <small>OUR SERVICE AREAS</small>Abu Dhabi · Dubai · Sharjah, UAE
+              </div>
+            </div>
+          </div>
+          <form
+            class="contact-form"
+            action="mailto:info@woodvance.com"
+            method="post"
+            enctype="text/plain">
+            <h3>Start your enquiry</h3>
+            <p>Share your details and we'll be happy to hear from you.</p>
+            <label for="name">Your name</label
+            ><input
+              id="name"
+              name="Name"
+              type="text"
+              placeholder="Full name"
+              required /><label for="email">Email address</label
+            ><input
+              id="email"
+              name="Email"
+              type="email"
+              placeholder="you@example.com"
+              required /><label for="service">Service required</label
+            ><select id="service" name="Service">
+              <option value="">Choose a service</option>
+              <option>General contracting / civil works</option>
+              <option>Gypsum ceilings and partitions</option>
+              <option>Interior finishing and fit-out</option>
+              <option>MEP and maintenance</option>
+              <option>Aluminium, glass and metal works</option>
+              <option>Painting, flooring and joinery</option>
+              <option>Waterproofing / property maintenance</option>
+              <option>Other</option></select
+            ><label for="message">Tell us about your project</label
+            ><textarea
+              id="message"
+              name="Message"
+              rows="4"
+              placeholder="A few details about what you need..."></textarea
+            ><button class="btn btn-dark form-btn" type="submit">
+              Send Enquiry <span>↗</span></button
+            ><small class="form-note"
+              >Your email application will open to send this enquiry.</small
+            >
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/971501908864"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with Woodvance on WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path
+          d="M16.02 3.2A12.7 12.7 0 0 0 5.1 22.38L3.3 28.9l6.68-1.75A12.7 12.7 0 1 0 16.02 3.2Zm0 23.1c-1.95 0-3.86-.52-5.52-1.52l-.4-.24-3.96 1.04 1.06-3.86-.26-.42a10.35 10.35 0 1 1 9.08 5Zm5.68-7.75c-.31-.16-1.84-.91-2.13-1.02-.29-.1-.5-.16-.71.16-.21.31-.81 1.02-.99 1.23-.18.21-.37.23-.68.08-.31-.16-1.31-.48-2.5-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.48.14-.64.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.7-.97-2.33-.26-.61-.52-.53-.71-.54h-.6c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.6s1.13 3.02 1.29 3.23c.16.21 2.22 3.39 5.37 4.75.75.32 1.33.51 1.79.65.75.24 1.43.21 1.97.13.6-.09 1.84-.75 2.1-1.49.26-.73.26-1.36.18-1.49-.08-.13-.29-.21-.6-.37Z" />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-main">
+          <a class="brand footer-brand" href="index.html"
+            ><span class="brand-mark">W<span>.</span></span
+            ><span class="brand-name"
+              >WOODVANCE<small>GENERAL CONTRACTING</small></span
+            ></a
+          >
+          <p>
+            Thoughtful contracting and property care.<br />Serving Abu Dhabi,
+            Dubai and Sharjah.
+          </p>
+          <a class="footer-top" href="#top">BACK TO TOP ↑</a>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© <span id="year">2026</span> Woodvance General Contracting. All
+            rights reserved.</span
+          ><span>Built on quality. Driven by trust.</span>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p><strong>Woodvance General Contracting</strong></p>
-  <p>Mussafah M7, ABU DHABI | Dubai | Sharjah</p>
-  <p>Contact: +971 50 190 8864 | Amjad@woodvance.com | info@woodvance.com</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    </footer>
+    <script>
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav");
+      toggle.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
+        toggle.classList.toggle("open", isOpen);
+        toggle.setAttribute("aria-expanded", String(isOpen));
+      });
+      nav.querySelectorAll("a").forEach((link) =>
+        link.addEventListener("click", () => {
+          nav.classList.remove("open");
+          toggle.classList.remove("open");
+          toggle.setAttribute("aria-expanded", "false");
+        }),
+      );
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
-
-
-
-
